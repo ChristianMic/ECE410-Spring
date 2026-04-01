@@ -1,2 +1,2 @@
-# ECE410-Spring
-Public repository for ECE410.
+# ECE410-Spring 2026
+Christian Mickelson
