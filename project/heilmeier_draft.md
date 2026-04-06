@@ -7,7 +7,7 @@
 2. How is it done today, and what are the limits of current practice? 
 	
 	Today, CNNs are accelerated 2.5D/3D heterogenous integration and task/data-level paraellelism via partitioning layers (also utilizing SDM).
-	Additional method include optimization of multiple chiplet communication and utilizing dedicated memory hierarchies to skip unnecessary computations.
+	Additional methods include optimization of multiple chiplet communication and utilizing dedicated memory hierarchies to skip unnecessary computations.
 	
 	One major limit of optimization with chiplets for this kind of algorithm is that the latency between chiplets is higher than with a single chip.
 	If multiple high-performance chiplets are utilized, the system struggles with voltage drops and thermal issues
