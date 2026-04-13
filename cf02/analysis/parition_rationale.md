@@ -1,28 +1,3 @@
-a) I will be accelerating the kernels MaxPool2D.forward and MaxPool2D.backward. The roofline analysis  
-shows that both kernels are memory bound, and could benefit from acceleration targeting memory operations.  
-
-b) The software baseline will continue to handel all computational operations within the system.
-
-c) The interface bandwidtch would need to be greater greater than 41.6GB/s, otherwise it will become
-bottlenecked
-
-d) The kernels are memory bound on my current hardware. The accelerated hardware I expect to still be memory bound,
-it will loosen the bottleneck allowing a higher arithmetic intensity.
-
-The kernels that I will be accelerating with my co-processor chiplet are MaxPool2D.forward and MaxPool2D.backward.
-These are two most dominant kernels within the system, making them an obvious target for acceleration.
-The roofline analysis shows that both of the kernels are memory bound and quite far left from the ridge point. Due 
-to this, I believe both kernels could benefit from acceleration targeting memory operations. Since the chiplet will 
-be accelerating only memory based operations, the software will still continue to handle all computational operations. 
-I am certain the software will be able to handle this as the current kernels are far to the left of the ridge point
-indicating that the kernels are not bottlenecked by computational operations.
-
-To accomplish this, the chiplet will need an interface with a bandwidth greater than my hardware's 41.6GB/s rate. If this is
-not followed, the system will become interface bound. The interface that fits this requirement is the UCIe which has a bandwidth up to ~100GB/s. 
-Although the chiplet will improve performance and shift arithmetic intensity of both kernels towards the ridge point, 
-the memory demand is so high that I expect the kernels will still be memory bound when accelerated.
-
-
 The kernels that I will be accelerating with my co-processor chiplet are MaxPool2D.forward and MaxPool2D.backward.  
 These two are the most dominant kernels within the system (~14% ~7% total runtime respectively) adding up to 21% of total  
 run time. The roofline analysis shows that both kernels are memory bound and are underperforming when it comes to memory  
