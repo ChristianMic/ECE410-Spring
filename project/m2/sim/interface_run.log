@@ -1,0 +1,31 @@
+VCD info: dumpfile tb_axi4_stream_interface.vcd opened for output.
+==============================================
+ axi4_stream_interface Testbench
+==============================================
+
+--- Test 1: tready/tvalid handshaking ---
+  PASS: s_axis_tready deasserted during processing and reasserted after
+
+--- Test 2: Backpressure (m_axis_tready held low) ---
+  PASS: m_axis_tvalid held high during backpressure
+
+--- Test 3: tlast assertion ---
+  PASS: tlast asserted with tvalid and deasserted after acceptance
+
+--- Test 4: Back-to-back transfers ---
+  PASS: both back-to-back results correct
+        Result 1: max=1024 mask=4'b1000
+        Result 2: max=1024 mask=4'b0001
+
+--- Test 5: Reset during transfer (outputs clear) ---
+  PASS: outputs cleared during reset
+
+--- Test 6: Reset recovery (normal transaction after reset) ---
+  PASS: interface recovered correctly after reset
+
+==============================================
+ Results: 6/6 tests passed
+ ALL TESTS PASSED
+==============================================
+
+tb_axi4_stream_interface.sv:413: $finish called at 1025000 (1ps)

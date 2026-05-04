@@ -1,0 +1,35 @@
+VCD info: dumpfile tb_compute_core.vcd opened for output.
+==============================================
+ compute_core Testbench
+==============================================
+
+--- Test 1: Ascending values (max=d) ---
+  Input: a=256 b=512 c=768 d=1024 (Q8.8 integers)
+  PASS: max=1024 (expected 1024), mask=4'b1000 (expected 4'b1000)
+
+--- Test 2: Descending values (max=a) ---
+  Input: a=1024 b=768 c=512 d=256 (Q8.8 integers)
+  PASS: max=1024 (expected 1024), mask=4'b0001 (expected 4'b0001)
+
+--- Test 3: All equal (tie -> a wins) ---
+  Input: a=512 b=512 c=512 d=512 (Q8.8 integers)
+  PASS: max=512 (expected 512), mask=4'b0001 (expected 4'b0001)
+
+--- Test 4: Negative values (max=a) ---
+  Input: a=-256 b=-512 c=-768 d=-1024 (Q8.8 integers)
+  PASS: max=-256 (expected -256), mask=4'b0001 (expected 4'b0001)
+
+--- Test 5: Mixed positive/negative (max=b) ---
+  Input: a=-256 b=768 c=256 d=-512 (Q8.8 integers)
+  PASS: max=768 (expected 768), mask=4'b0010 (expected 4'b0010)
+
+--- Test 6: Bottom-left is max (max=c) ---
+  Input: a=256 b=512 c=1280 d=768 (Q8.8 integers)
+  PASS: max=1280 (expected 1280), mask=4'b0100 (expected 4'b0100)
+
+==============================================
+ Results: 6/6 tests passed
+ ALL TESTS PASSED
+==============================================
+
+tb_compute_core.sv:213: $finish called at 535000 (1ps)
