@@ -1,0 +1,40 @@
+130. Printing statistics.
+
+=== compute_core ===
+
+   Number of wires:                362
+   Number of wire bits:            474
+   Number of public wires:          15
+   Number of public wire bits:     127
+   Number of ports:                 10
+   Number of port bits:             88
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                403
+     $_ANDNOT_                     109
+     $_AND_                          2
+     $_MUX_                        102
+     $_NAND_                         5
+     $_NOR_                         10
+     $_NOT_                          3
+     $_ORNOT_                       57
+     $_OR_                           8
+     $_XNOR_                        26
+     $_XOR_                         25
+     sky130_fd_sc_hd__dfxtp_2       56
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\compute_core': 1191.142400
+     of which used for sequential elements: 1191.142400 (100.00%)
+
